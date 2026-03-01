@@ -3,7 +3,9 @@
 ## 技術スタック
 - バニラ HTML/CSS/JS（ビルドツールなし）
 - ホスティング: GitHub Pages
+- ドメイン: piktool.net（XServer Domain で取得）
 - リポジトリ: Nyaaa0011/web-tools
+- GA4 測定ID: G-792H51BDVS
 
 ## ディレクトリ構成
 ```
@@ -70,4 +72,9 @@
 - [x] privacy / contact / sitemap / robots.txt
 - [x] GitHub リポジトリ作成・push
 - [x] GitHub Pages 有効化
-- 公開URL: https://nyaaa0011.github.io/web-tools/
+- [x] 独自ドメイン piktool.net 取得・設定
+- [x] 全ページ URL を piktool.net に更新
+- [x] DNS レコード設定（A レコード × 4 + CNAME）
+- [x] ネームサーバーを ns1-ns3.xdomain.ne.jp に変更
+- [ ] HTTPS 強制有効化（証明書プロビジョニング待ち）
+- 公開URL: https://piktool.net/

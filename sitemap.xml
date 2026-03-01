@@ -4,145 +4,145 @@
 
   <!-- Portal -->
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/"/>
+    <loc>https://piktool.net/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/en/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/"/>
+    <loc>https://piktool.net/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- 文字数カウンター / Character Counter -->
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/moji-count/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/moji-count/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/char-count/"/>
+    <loc>https://piktool.net/moji-count/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/moji-count/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/char-count/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/en/char-count/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/moji-count/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/char-count/"/>
+    <loc>https://piktool.net/en/char-count/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/moji-count/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/char-count/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- カラーコード変換 / Color Code Converter -->
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/color-code/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/color-code/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/color-code/"/>
+    <loc>https://piktool.net/color-code/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/color-code/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/color-code/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/en/color-code/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/color-code/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/color-code/"/>
+    <loc>https://piktool.net/en/color-code/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/color-code/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/color-code/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- パスワード生成 / Password Generator -->
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/password-gen/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/password-gen/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/password-gen/"/>
+    <loc>https://piktool.net/password-gen/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/password-gen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/password-gen/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/en/password-gen/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/password-gen/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/password-gen/"/>
+    <loc>https://piktool.net/en/password-gen/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/password-gen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/password-gen/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- JSON整形 / JSON Formatter -->
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/json-format/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/json-format/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/json-format/"/>
+    <loc>https://piktool.net/json-format/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/json-format/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/json-format/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/en/json-format/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/json-format/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/json-format/"/>
+    <loc>https://piktool.net/en/json-format/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/json-format/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/json-format/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- 割り勘計算 / Bill Splitter -->
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/warikan/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/warikan/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/split-bill/"/>
+    <loc>https://piktool.net/warikan/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/warikan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/split-bill/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/en/split-bill/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/warikan/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/split-bill/"/>
+    <loc>https://piktool.net/en/split-bill/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/warikan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/split-bill/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- 年齢計算 / Age Calculator -->
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/age-calc/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/age-calc/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/age-calc/"/>
+    <loc>https://piktool.net/age-calc/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/age-calc/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/age-calc/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/en/age-calc/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/age-calc/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/age-calc/"/>
+    <loc>https://piktool.net/en/age-calc/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/age-calc/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/age-calc/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- 単位変換 / Unit Converter -->
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/unit-conv/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/unit-conv/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/unit-conv/"/>
+    <loc>https://piktool.net/unit-conv/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/unit-conv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/unit-conv/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/en/unit-conv/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/unit-conv/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/unit-conv/"/>
+    <loc>https://piktool.net/en/unit-conv/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://piktool.net/unit-conv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://piktool.net/en/unit-conv/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Privacy & Contact -->
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/privacy.html</loc>
+    <loc>https://piktool.net/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/en/privacy.html</loc>
+    <loc>https://piktool.net/en/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://nyaaa0011.github.io/web-tools/contact.html</loc>
+    <loc>https://piktool.net/contact.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
