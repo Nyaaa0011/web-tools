@@ -68,5 +68,6 @@
 - [x] 年齢計算 (JP/EN)
 - [x] 単位変換 (JP/EN)
 - [x] privacy / contact / sitemap / robots.txt
-- [ ] GitHub リポジトリ作成・push
-- [ ] GitHub Pages 有効化
+- [x] GitHub リポジトリ作成・push
+- [x] GitHub Pages 有効化
+- 公開URL: https://nyaaa0011.github.io/web-tools/
