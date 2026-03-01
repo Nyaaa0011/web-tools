@@ -130,7 +130,12 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Privacy & Contact -->
+  <!-- About / Privacy / Contact -->
+  <url>
+    <loc>https://piktool.net/about.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
   <url>
     <loc>https://piktool.net/privacy.html</loc>
     <changefreq>yearly</changefreq>
