@@ -23,7 +23,7 @@
     .str-txt{text-align:center;font-size:.85rem;margin-top:.3rem;color:var(--text2)}
     input[type=range]{width:100%;margin:.5rem 0;accent-color:var(--accent)}
     .tgl-group{display:flex;flex-wrap:wrap;gap:.5rem;margin:.5rem 0}.tgl{display:flex;align-items:center;gap:.4rem;padding:.4rem .8rem;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:.85rem;user-select:none}.tgl:has(input:checked){background:var(--accent-light);border-color:var(--accent)}.tgl input{display:none}
-    .related{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.8rem}.related a{padding:.5rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:.85rem;color:var(--text);text-decoration:none}.section{margin-top:2rem}.section h2{font-size:1.1rem;margin-bottom:.8rem;border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:.3rem}
+    .related{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.8rem}.related a{padding:.5rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:.85rem;color:var(--text);text-decoration:none}.section{margin-top:2rem}.section h2{font-size:1.1rem;margin-bottom:.8rem;border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:.3rem}ul{padding-left:1.5rem;margin-top:.5rem}li{margin-bottom:.3rem}.faq-q{padding:.8rem;font-weight:600;cursor:pointer;background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:.5rem;display:flex;justify-content:space-between}.faq-q::after{content:'▼';font-size:.7rem}.faq-a{display:none;padding:0 .8rem .8rem;color:var(--text2);margin-top:-.5rem;margin-bottom:.5rem}.faq-q.open::after{content:'▲'}.faq-q.open+.faq-a{display:block}
   </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "パスワード生成", "url": "https://piktool.net/password-gen/", "description": "安全なランダムパスワードを生成。強度チェック付き。", "applicationCategory": "UtilityApplication", "operatingSystem": "All", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "JPY"}}</script>
 </head>
@@ -44,6 +44,24 @@
         <label class="tgl"><input type="checkbox" checked onchange="gen()" id="sy">記号 (!@#$)</label>
       </div>
       <div class="btns"><button class="btn btn-p" onclick="gen()">🔄 再生成</button><button class="btn btn-s" onclick="cp(pw.textContent,this)">📋 コピー</button></div>
+    </div>
+    <div class="section">
+      <h2>使い方</h2>
+      <p>「再生成」ボタンをクリックするだけで、安全なランダムパスワードが即座に生成されます。スライダーで文字数を4〜64文字に調整でき、大文字・小文字・数字・記号のオン/オフで文字種をカスタマイズできます。強度メーターでパスワードの安全性をリアルタイムで確認できます。</p>
+      <ul>
+        <li><strong>アカウント登録</strong> — 新規アカウント作成時に安全なパスワードを生成</li>
+        <li><strong>パスワード変更</strong> — 定期的なパスワード更新に</li>
+        <li><strong>セキュリティ強化</strong> — 推測されにくいランダム文字列を作成</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>よくある質問</h2>
+      <div class="faq-q" onclick="this.classList.toggle('open')">生成されたパスワードは安全ですか？</div>
+      <div class="faq-a">はい。暗号学的に安全な乱数生成（Web Crypto API の crypto.getRandomValues）を使用しています。パスワードはブラウザ内で生成され、外部サーバーに送信されることはありません。</div>
+      <div class="faq-q" onclick="this.classList.toggle('open')">推奨の文字数はどのくらいですか？</div>
+      <div class="faq-a">一般的なアカウントには12文字以上、銀行やメールなど重要なアカウントには16文字以上を推奨します。大文字・小文字・数字・記号のすべてを含めるとさらに安全性が高まります。</div>
+      <div class="faq-q" onclick="this.classList.toggle('open')">パスワードは保存されますか？</div>
+      <div class="faq-a">いいえ。パスワードはブラウザ内でのみ生成・表示され、サーバーに送信されたり保存されることは一切ありません。ページを閉じるとパスワードは消去されます。</div>
     </div>
     <div class="section"><h2>関連ツール</h2><div class="related"><a href="../moji-count/">📝 文字数カウンター</a><a href="../json-format/">📋 JSON整形</a><a href="../color-code/">🎨 カラーコード変換</a></div></div>
   </main>
