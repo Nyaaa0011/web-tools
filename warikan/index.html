@@ -25,8 +25,8 @@
     <h1>💰 割り勘計算</h1>
     <p class="sub">飲み会・旅行の費用をかんたんに割り勘</p>
     <div class="card">
-      <div class="grid2"><div><label>合計金額 (円)</label><input type="number" id="tot" value="10000" min="0" oninput="calc()"></div><div><label>人数</label><input type="number" id="ppl" value="3" min="1" max="100" oninput="calc()"></div></div>
-      <div style="margin-top:1rem"><label>端数処理</label><select id="md" onchange="calc()" aria-label="端数処理方法"><option value="ceil">切り上げ（100円単位）</option><option value="floor">切り捨て（100円単位）</option><option value="round">四捨五入（100円単位）</option><option value="exact">端数なし（1円単位）</option></select></div>
+      <div class="grid2"><div><label for="tot">合計金額 (円)</label><input type="number" id="tot" value="10000" min="0" oninput="calc()"></div><div><label for="ppl">人数</label><input type="number" id="ppl" value="3" min="1" max="100" oninput="calc()"></div></div>
+      <div style="margin-top:1rem"><label for="md">端数処理</label><select id="md" onchange="calc()"><option value="ceil">切り上げ（100円単位）</option><option value="floor">切り捨て（100円単位）</option><option value="round">四捨五入（100円単位）</option><option value="exact">端数なし（1円単位）</option></select></div>
       <div class="grid2">
         <div class="res"><div class="rl">1人あたり</div><div class="rv" id="pp" style="color:var(--accent)">-</div></div>
         <div class="res"><div class="rl">幹事の調整額</div><div class="rv" id="org">-</div></div>

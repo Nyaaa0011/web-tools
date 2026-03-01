@@ -36,7 +36,7 @@
       <div class="pw-box" id="pw" onclick="cp(this.textContent,this)"></div>
       <div class="str-meter"><div class="str-fill" id="bar"></div></div>
       <div class="str-txt" id="stxt"></div>
-      <div style="margin-top:1rem"><label>文字数: <strong id="lv">16</strong></label><input type="range" id="len" min="4" max="64" value="16" oninput="lv.textContent=this.value;gen()"></div>
+      <div style="margin-top:1rem"><label for="len">文字数: <strong id="lv">16</strong></label><input type="range" id="len" min="4" max="64" value="16" oninput="lv.textContent=this.value;gen()"></div>
       <div class="tgl-group">
         <label class="tgl"><input type="checkbox" checked onchange="gen()" id="up">大文字 (A-Z)</label>
         <label class="tgl"><input type="checkbox" checked onchange="gen()" id="lo">小文字 (a-z)</label>

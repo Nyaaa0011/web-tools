@@ -28,7 +28,7 @@
       <div class="pw-box" id="pw" onclick="cp(this.textContent,this)"></div>
       <div class="str-meter"><div class="str-fill" id="bar"></div></div>
       <div class="str-txt" id="stxt"></div>
-      <div style="margin-top:1rem"><label>Length: <strong id="lv">16</strong></label><input type="range" id="len" min="4" max="64" value="16" oninput="lv.textContent=this.value;gen()"></div>
+      <div style="margin-top:1rem"><label for="len">Length: <strong id="lv">16</strong></label><input type="range" id="len" min="4" max="64" value="16" oninput="lv.textContent=this.value;gen()"></div>
       <div class="tgl-group">
         <label class="tgl"><input type="checkbox" checked onchange="gen()" id="up">Uppercase</label>
         <label class="tgl"><input type="checkbox" checked onchange="gen()" id="lo">Lowercase</label>
