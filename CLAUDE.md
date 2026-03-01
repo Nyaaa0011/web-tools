@@ -76,5 +76,5 @@
 - [x] 全ページ URL を piktool.net に更新
 - [x] DNS レコード設定（A レコード × 4 + CNAME）
 - [x] ネームサーバーを ns1-ns3.xdomain.ne.jp に変更
-- [ ] HTTPS 強制有効化（証明書プロビジョニング待ち）
+- [x] HTTPS 強制有効化
 - 公開URL: https://piktool.net/
