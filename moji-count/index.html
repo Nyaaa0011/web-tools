@@ -6,7 +6,7 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-792H51BDVS');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>文字数カウンター - 無料オンライン文字数カウント | Web Tools</title>
-  <meta name="description" content="テキストの文字数・単語数・行数をリアルタイムでカウント。Twitter、ブログ、レポートの文字数チェックに。登録不要・無料。">
+  <meta name="description" content="テキストの文字数・単語数・行数・バイト数をリアルタイムでカウント。Twitter（X）の文字数チェック、ブログ記事やレポートの文字数確認に最適。コピペするだけで即カウント。登録不要・完全無料のオンラインツール。">
   <link rel="canonical" href="https://piktool.net/moji-count/">
   <meta property="og:title" content="文字数カウンター | Web Tools">
   <meta property="og:description" content="テキストの文字数・単語数・行数をリアルタイムでカウント。">
@@ -15,6 +15,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
   <link rel="alternate" hreflang="en" href="https://piktool.net/en/char-count/">
   <link rel="alternate" hreflang="ja" href="https://piktool.net/moji-count/">
+  <link rel="alternate" hreflang="x-default" href="https://piktool.net/moji-count/">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"文字数カウンター","url":"https://piktool.net/moji-count/","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"}}</script>
   <style>
     :root{--bg:#fff;--bg2:#f5f7fa;--text:#333;--text2:#666;--border:#e0e0e0;--accent:#4A90D9;--accent-light:rgba(74,144,217,.1);--card:#fff;--input:#f5f7fa;--font:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans',sans-serif}
@@ -64,7 +65,7 @@
     <p class="sub">テキストの文字数・単語数・行数をリアルタイムでカウント</p>
 
     <div class="card">
-      <textarea id="t" placeholder="ここにテキストを入力またはペースト..." oninput="c()"></textarea>
+      <textarea id="t" placeholder="ここにテキストを入力またはペースト..." oninput="c()" aria-label="テキスト入力エリア"></textarea>
       <div class="grid">
         <div class="item"><div class="label">文字数</div><div class="val" id="ch">0</div></div>
         <div class="item"><div class="label">スペース除く</div><div class="val" id="chn">0</div></div>

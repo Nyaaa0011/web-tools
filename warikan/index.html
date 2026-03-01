@@ -6,9 +6,10 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-792H51BDVS');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>割り勘計算 - 飲み会・旅行の費用を簡単計算 | Web Tools</title>
-  <meta name="description" content="飲み会や旅行の費用を人数で割り勘計算。端数処理も自動。無料ツール。">
+  <meta name="description" content="飲み会や旅行の費用を人数で割り勘計算できる無料オンラインツール。切り上げ・切り捨て・四捨五入の端数処理を自動計算。幹事の調整額も表示。登録不要・スマホ対応。">
   <link rel="canonical" href="https://piktool.net/warikan/">
   <link rel="alternate" hreflang="ja" href="https://piktool.net/warikan/">
+  <link rel="alternate" hreflang="x-default" href="https://piktool.net/warikan/">
   <meta property="og:title" content="割り勘計算 | Web Tools">
   <meta property="og:description" content="飲み会や旅行の費用を人数で割り勘計算。端数処理も自動。">
   <meta property="og:type" content="website">
@@ -25,7 +26,7 @@
     <p class="sub">飲み会・旅行の費用をかんたんに割り勘</p>
     <div class="card">
       <div class="grid2"><div><label>合計金額 (円)</label><input type="number" id="tot" value="10000" min="0" oninput="calc()"></div><div><label>人数</label><input type="number" id="ppl" value="3" min="1" max="100" oninput="calc()"></div></div>
-      <div style="margin-top:1rem"><label>端数処理</label><select id="md" onchange="calc()"><option value="ceil">切り上げ（100円単位）</option><option value="floor">切り捨て（100円単位）</option><option value="round">四捨五入（100円単位）</option><option value="exact">端数なし（1円単位）</option></select></div>
+      <div style="margin-top:1rem"><label>端数処理</label><select id="md" onchange="calc()" aria-label="端数処理方法"><option value="ceil">切り上げ（100円単位）</option><option value="floor">切り捨て（100円単位）</option><option value="round">四捨五入（100円単位）</option><option value="exact">端数なし（1円単位）</option></select></div>
       <div class="grid2">
         <div class="res"><div class="rl">1人あたり</div><div class="rv" id="pp" style="color:var(--accent)">-</div></div>
         <div class="res"><div class="rl">幹事の調整額</div><div class="rv" id="org">-</div></div>
