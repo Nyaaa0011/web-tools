@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>単位変換 - 長さ・重さ・温度を変換 | Web Tools</title>
+  <meta name="description" content="長さ、重さ、温度、面積、体積の単位を変換。無料・登録不要。">
+  <link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/unit-conv/">
+  <style>:root{--bg:#fff;--bg2:#f5f7fa;--text:#333;--text2:#666;--border:#e0e0e0;--accent:#795548;--accent-light:rgba(121,85,72,.1);--card:#fff;--input:#f5f7fa;--font:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans',sans-serif}@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1a1a2e;--bg2:#16213e;--text:#e0e0e0;--text2:#a0a0a0;--border:#2a2a4a;--card:#1e1e3a;--input:#16213e}}[data-theme=dark]{--bg:#1a1a2e;--bg2:#16213e;--text:#e0e0e0;--text2:#a0a0a0;--border:#2a2a4a;--card:#1e1e3a;--input:#16213e}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh;display:flex;flex-direction:column}a{color:var(--accent)}header{background:var(--card);border-bottom:1px solid var(--border);padding:0 1rem;position:sticky;top:0;z-index:100}.header-inner{max-width:800px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}.logo{font-size:1.1rem;font-weight:700;color:var(--text);text-decoration:none}.hdr-actions{display:flex;gap:.5rem}.btn-i{background:none;border:1px solid var(--border);border-radius:8px;padding:.4rem .6rem;cursor:pointer;color:var(--text);font-size:.85rem}main{flex:1;max-width:800px;margin:0 auto;padding:2rem 1rem;width:100%}h1{font-size:1.5rem;font-weight:700;text-align:center;margin-bottom:.5rem}.sub{text-align:center;color:var(--text2);margin-bottom:2rem}.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:2rem}input[type=number],input[type=text],select{width:100%;padding:.6rem .8rem;border:1px solid var(--border);border-radius:8px;background:var(--input);color:var(--text);font-size:1rem;font-family:var(--font)}input:focus{outline:none;border-color:var(--accent)}label{display:block;font-size:.85rem;font-weight:600;margin-bottom:.3rem;color:var(--text2)}footer{border-top:1px solid var(--border);padding:1rem;text-align:center;font-size:.8rem;color:var(--text2);margin-top:auto}footer a{color:var(--text2);margin:0 .5rem}
+    .tabs{display:flex;gap:.3rem;overflow-x:auto;padding-bottom:.5rem;margin-bottom:1rem;border-bottom:1px solid var(--border)}.tab{padding:.5rem 1rem;border:none;background:none;color:var(--text2);font-size:.85rem;cursor:pointer;border-radius:6px 6px 0 0;white-space:nowrap;font-family:var(--font)}.tab.active{color:var(--accent);background:var(--accent-light);font-weight:600}
+    .swap{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--border);background:var(--card);cursor:pointer;font-size:1.2rem;margin:.5rem auto;transition:transform .2s}.swap:hover{transform:rotate(180deg)}
+    .formula{margin-top:1rem;padding:.8rem;background:var(--bg2);border-radius:8px;font-size:.85rem;color:var(--text2);text-align:center}
+    .related{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.8rem}.related a{padding:.5rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:.85rem;color:var(--text);text-decoration:none}.section{margin-top:2rem}.section h2{font-size:1.1rem;margin-bottom:.8rem;border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:.3rem}
+  </style>
+</head>
+<body>
+  <header><div class="header-inner"><a href="../" class="logo">🛠️ Web Tools</a><div class="hdr-actions"><a href="../en/unit-conv/" class="btn-i">EN</a><button class="btn-i" onclick="toggleTheme()">🌙</button></div></div></header>
+  <main>
+    <h1>📐 単位変換</h1>
+    <p class="sub">長さ・重さ・温度など、よく使う単位をかんたんに変換</p>
+    <div class="card">
+      <div class="tabs" id="tabs"></div>
+      <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:.5rem;align-items:end">
+        <div><label>変換元</label><input type="number" id="fv" value="1" oninput="conv()"><select id="fu" onchange="conv()" style="margin-top:.5rem"></select></div>
+        <button class="swap" onclick="sw()">⇄</button>
+        <div><label>変換先</label><input type="text" id="tv" readonly style="font-weight:700;font-size:1.1rem"><select id="tu" onchange="conv()" style="margin-top:.5rem"></select></div>
+      </div>
+      <div class="formula" id="fm"></div>
+    </div>
+    <div class="section"><h2>関連ツール</h2><div class="related"><a href="../age-calc/">🎂 年齢計算</a><a href="../warikan/">💰 割り勘計算</a><a href="../moji-count/">📝 文字数カウンター</a></div></div>
+  </main>
+  <footer><a href="../privacy.html">プライバシーポリシー</a><a href="../contact.html">お問い合わせ</a><br>&copy; 2026 Web Tools</footer>
+  <script>
+    const U={'\u9577\u3055':{'mm':.001,'cm':.01,'m':1,'km':1000,'in':.0254,'ft':.3048,'yd':.9144,'mi':1609.344},'\u91CD\u3055':{'mg':1e-6,'g':.001,'kg':1,'t':1000,'oz':.0283495,'lb':.453592},'\u6E29\u5EA6':{'\u2103':'c','\u2109':'f','K':'k'},'\u9762\u7A4D':{'mm\u00B2':1e-6,'cm\u00B2':1e-4,'m\u00B2':1,'km\u00B2':1e6,'ha':1e4,'ac':4046.86},'\u4F53\u7A4D':{'mL':1e-6,'L':.001,'m\u00B3':1,'fl oz':2.95735e-5,'cup':2.36588e-4,'gal':.00378541}};
+    let cc=Object.keys(U)[0];
+    function init(){const tb=document.getElementById('tabs');Object.keys(U).forEach((c,i)=>{const b=document.createElement('button');b.className='tab'+(i===0?' active':'');b.textContent=c;b.addEventListener('click',()=>{tb.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');cc=c;pop();conv()});tb.appendChild(b)});pop();conv()}
+    function pop(){const us=Object.keys(U[cc]);['fu','tu'].forEach((id,i)=>{const s=document.getElementById(id);s.textContent='';us.forEach((u,j)=>{const o=document.createElement('option');o.value=u;o.textContent=u;if(i===0&&j===0)o.selected=true;if(i===1&&j===1)o.selected=true;s.appendChild(o)})})}
+    function conv(){const v=+fv.value,f=fu.value,t=tu.value,d=U[cc];let r;if(cc==='\u6E29\u5EA6'){let c;if(d[f]==='c')c=v;else if(d[f]==='f')c=(v-32)*5/9;else c=v-273.15;if(d[t]==='c')r=c;else if(d[t]==='f')r=c*9/5+32;else r=c+273.15}else{r=v*d[f]/d[t]}tv.value=Number.isInteger(r)?r:r.toPrecision(8).replace(/\.?0+$/,'');fm.textContent=v+' '+f+' = '+tv.value+' '+t}
+    function sw(){const a=fu.value;fu.value=tu.value;tu.value=a;conv()}
+    function toggleTheme(){const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark');localStorage.setItem('theme',d.getAttribute('data-theme'))}
+    if(localStorage.getItem('theme'))document.documentElement.setAttribute('data-theme',localStorage.getItem('theme'));init();
+  </script>
+</body>
+</html>

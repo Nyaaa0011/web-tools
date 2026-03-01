@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>割り勘計算 - 飲み会・旅行の費用を簡単計算 | Web Tools</title>
+  <meta name="description" content="飲み会や旅行の費用を人数で割り勘計算。端数処理も自動。無料ツール。">
+  <link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/split-bill/">
+  <style>:root{--bg:#fff;--bg2:#f5f7fa;--text:#333;--text2:#666;--border:#e0e0e0;--accent:#9C27B0;--accent-light:rgba(156,39,176,.1);--card:#fff;--input:#f5f7fa;--font:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans',sans-serif}@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1a1a2e;--bg2:#16213e;--text:#e0e0e0;--text2:#a0a0a0;--border:#2a2a4a;--card:#1e1e3a;--input:#16213e}}[data-theme=dark]{--bg:#1a1a2e;--bg2:#16213e;--text:#e0e0e0;--text2:#a0a0a0;--border:#2a2a4a;--card:#1e1e3a;--input:#16213e}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh;display:flex;flex-direction:column}a{color:var(--accent)}header{background:var(--card);border-bottom:1px solid var(--border);padding:0 1rem;position:sticky;top:0;z-index:100}.header-inner{max-width:800px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}.logo{font-size:1.1rem;font-weight:700;color:var(--text);text-decoration:none}.hdr-actions{display:flex;gap:.5rem}.btn-i{background:none;border:1px solid var(--border);border-radius:8px;padding:.4rem .6rem;cursor:pointer;color:var(--text);font-size:.85rem}main{flex:1;max-width:800px;margin:0 auto;padding:2rem 1rem;width:100%}h1{font-size:1.5rem;font-weight:700;text-align:center;margin-bottom:.5rem}.sub{text-align:center;color:var(--text2);margin-bottom:2rem}.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:2rem}input[type=number],select{width:100%;padding:.6rem .8rem;border:1px solid var(--border);border-radius:8px;background:var(--input);color:var(--text);font-size:1rem;font-family:var(--font)}input:focus,select:focus{outline:none;border-color:var(--accent)}label{display:block;font-size:.85rem;font-weight:600;margin-bottom:.3rem;color:var(--text2)}footer{border-top:1px solid var(--border);padding:1rem;text-align:center;font-size:.8rem;color:var(--text2);margin-top:auto}footer a{color:var(--text2);margin:0 .5rem}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.res{background:var(--bg2);border-radius:8px;padding:.8rem;text-align:center;margin-top:1rem}.res .rl{font-size:.7rem;color:var(--text2)}.res .rv{font-size:1.3rem;font-weight:700}.detail{margin-top:1rem;padding:1rem;background:var(--bg2);border-radius:8px;font-size:.9rem;white-space:pre-line}.related{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.8rem}.related a{padding:.5rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:.85rem;color:var(--text);text-decoration:none}.section{margin-top:2rem}.section h2{font-size:1.1rem;margin-bottom:.8rem;border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:.3rem}</style>
+</head>
+<body>
+  <header><div class="header-inner"><a href="../" class="logo">🛠️ Web Tools</a><div class="hdr-actions"><a href="../en/split-bill/" class="btn-i">EN</a><button class="btn-i" onclick="toggleTheme()">🌙</button></div></div></header>
+  <main>
+    <h1>💰 割り勘計算</h1>
+    <p class="sub">飲み会・旅行の費用をかんたんに割り勘</p>
+    <div class="card">
+      <div class="grid2"><div><label>合計金額 (円)</label><input type="number" id="tot" value="10000" min="0" oninput="calc()"></div><div><label>人数</label><input type="number" id="ppl" value="3" min="1" max="100" oninput="calc()"></div></div>
+      <div style="margin-top:1rem"><label>端数処理</label><select id="md" onchange="calc()"><option value="ceil">切り上げ（100円単位）</option><option value="floor">切り捨て（100円単位）</option><option value="round">四捨五入（100円単位）</option><option value="exact">端数なし（1円単位）</option></select></div>
+      <div class="grid2">
+        <div class="res"><div class="rl">1人あたり</div><div class="rv" id="pp" style="color:var(--accent)">-</div></div>
+        <div class="res"><div class="rl">幹事の調整額</div><div class="rv" id="org">-</div></div>
+      </div>
+      <div class="detail" id="det"></div>
+    </div>
+    <div class="section"><h2>関連ツール</h2><div class="related"><a href="../age-calc/">🎂 年齢計算</a><a href="../unit-conv/">📐 単位変換</a><a href="../moji-count/">📝 文字数カウンター</a></div></div>
+  </main>
+  <footer><a href="../privacy.html">プライバシーポリシー</a><a href="../contact.html">お問い合わせ</a><br>&copy; 2026 Web Tools</footer>
+  <script>
+    function calc(){const t=+tot.value,p=+ppl.value,m=md.value;if(!t||!p)return;const e=t/p;let pp;switch(m){case'ceil':pp=Math.ceil(e/100)*100;break;case'floor':pp=Math.floor(e/100)*100;break;case'round':pp=Math.round(e/100)*100;break;default:pp=Math.round(e)}const c=pp*p,d=c-t;document.getElementById('pp').textContent='\u00a5'+pp.toLocaleString();org.textContent=d>=0?'\u00a5'+d.toLocaleString()+' \u4F59\u308A':'\u00a5'+Math.abs(d).toLocaleString()+' \u4E0D\u8DB3';det.textContent='\u3010\u5185\u8A33\u3011\n'+p+'\u4EBA \u00d7 \u00a5'+pp.toLocaleString()+' = \u00a5'+c.toLocaleString()+'\n\u5408\u8A08 \u00a5'+t.toLocaleString()+' \u3068\u306E\u5DEE\u984D: \u00a5'+d.toLocaleString()}
+    function toggleTheme(){const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark');localStorage.setItem('theme',d.getAttribute('data-theme'))}
+    if(localStorage.getItem('theme'))document.documentElement.setAttribute('data-theme',localStorage.getItem('theme'));calc();
+  </script>
+</body>
+</html>

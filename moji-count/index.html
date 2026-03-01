@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文字数カウンター - 無料オンライン文字数カウント | Web Tools</title>
+  <meta name="description" content="テキストの文字数・単語数・行数をリアルタイムでカウント。Twitter、ブログ、レポートの文字数チェックに。登録不要・無料。">
+  <link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/char-count/">
+  <link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/moji-count/">
+  <link rel="canonical" href="https://nyaaa0011.github.io/web-tools/moji-count/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"文字数カウンター","url":"https://nyaaa0011.github.io/web-tools/moji-count/","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"}}</script>
+  <style>
+    :root{--bg:#fff;--bg2:#f5f7fa;--text:#333;--text2:#666;--border:#e0e0e0;--accent:#4A90D9;--accent-light:rgba(74,144,217,.1);--card:#fff;--input:#f5f7fa;--font:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans',sans-serif}
+    @media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1a1a2e;--bg2:#16213e;--text:#e0e0e0;--text2:#a0a0a0;--border:#2a2a4a;--card:#1e1e3a;--input:#16213e}}
+    [data-theme=dark]{--bg:#1a1a2e;--bg2:#16213e;--text:#e0e0e0;--text2:#a0a0a0;--border:#2a2a4a;--card:#1e1e3a;--input:#16213e}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh;display:flex;flex-direction:column}
+    a{color:var(--accent);text-decoration:none}
+    header{background:var(--card);border-bottom:1px solid var(--border);padding:0 1rem;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+    .header-inner{max-width:800px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .logo{font-size:1.1rem;font-weight:700;color:var(--text);text-decoration:none}
+    .hdr-actions{display:flex;gap:.5rem}
+    .btn-i{background:none;border:1px solid var(--border);border-radius:8px;padding:.4rem .6rem;cursor:pointer;color:var(--text);font-size:.85rem}
+    main{flex:1;max-width:800px;margin:0 auto;padding:2rem 1rem;width:100%}
+    h1{font-size:1.5rem;font-weight:700;text-align:center;margin-bottom:.5rem}
+    .sub{text-align:center;color:var(--text2);margin-bottom:2rem}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:2rem}
+    textarea{width:100%;padding:.7rem 1rem;border:1px solid var(--border);border-radius:8px;background:var(--input);color:var(--text);font-family:var(--font);font-size:1rem;resize:vertical;min-height:150px}
+    textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-light)}
+    .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;margin-top:1rem}
+    .item{background:var(--bg2);border-radius:8px;padding:.8rem;text-align:center}
+    .item .label{font-size:.7rem;color:var(--text2)}
+    .item .val{font-size:1.3rem;font-weight:700}
+    .btns{display:flex;gap:.5rem;margin-top:1rem;flex-wrap:wrap}
+    .btn{padding:.6rem 1.2rem;border:none;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer;font-family:var(--font)}
+    .btn-p{background:var(--accent);color:#fff}
+    .btn-s{background:var(--bg2);color:var(--text);border:1px solid var(--border)}
+    footer{border-top:1px solid var(--border);padding:1rem;text-align:center;font-size:.8rem;color:var(--text2);margin-top:auto}
+    footer a{color:var(--text2);margin:0 .5rem}
+    .section{margin-top:2rem}
+    .section h2{font-size:1.1rem;margin-bottom:.8rem;border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:.3rem}
+    .faq-q{padding:.8rem;font-weight:600;cursor:pointer;background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:.5rem;display:flex;justify-content:space-between}
+    .faq-q::after{content:'▼';font-size:.7rem}
+    .faq-a{display:none;padding:0 .8rem .8rem;color:var(--text2);margin-top:-.5rem;margin-bottom:.5rem}
+    .faq-q.open::after{content:'▲'}
+    .faq-q.open+.faq-a{display:block}
+    .related{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.8rem}
+    .related a{padding:.5rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:.85rem;color:var(--text)}
+    @media(max-width:600px){.grid{grid-template-columns:1fr 1fr}h1{font-size:1.3rem}main{padding:1.5rem .8rem}}
+  </style>
+</head>
+<body>
+  <header><div class="header-inner"><a href="../" class="logo">🛠️ Web Tools</a><div class="hdr-actions"><a href="../en/char-count/" class="btn-i">EN</a><button class="btn-i" onclick="toggleTheme()">🌙</button></div></div></header>
+
+  <main>
+    <h1>📝 文字数カウンター</h1>
+    <p class="sub">テキストの文字数・単語数・行数をリアルタイムでカウント</p>
+
+    <div class="card">
+      <textarea id="t" placeholder="ここにテキストを入力またはペースト..." oninput="c()"></textarea>
+      <div class="grid">
+        <div class="item"><div class="label">文字数</div><div class="val" id="ch">0</div></div>
+        <div class="item"><div class="label">スペース除く</div><div class="val" id="chn">0</div></div>
+        <div class="item"><div class="label">単語数</div><div class="val" id="w">0</div></div>
+        <div class="item"><div class="label">行数</div><div class="val" id="ln">0</div></div>
+        <div class="item"><div class="label">段落数</div><div class="val" id="pg">0</div></div>
+        <div class="item"><div class="label">バイト数</div><div class="val" id="by">0</div></div>
+      </div>
+      <div class="btns">
+        <button class="btn btn-s" onclick="document.getElementById('t').value='';c()">クリア</button>
+        <button class="btn btn-s" onclick="cp(this)">結果をコピー</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>使い方</h2>
+      <p>テキストを入力するだけで文字数・単語数・行数がリアルタイムで表示されます。</p>
+      <ul style="padding-left:1.5rem;margin-top:.5rem">
+        <li><strong>Twitter（X）</strong> — 140文字に収まるかチェック</li>
+        <li><strong>ブログ記事</strong> — SEO最適な文字数の確認</li>
+        <li><strong>レポート</strong> — 指定文字数を満たしているか確認</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>よくある質問</h2>
+      <div class="faq-q" onclick="this.classList.toggle('open')">スペースは文字数に含まれますか？</div>
+      <div class="faq-a">はい、スペース込みとスペース除外の両方を表示します。</div>
+      <div class="faq-q" onclick="this.classList.toggle('open')">入力したテキストは保存されますか？</div>
+      <div class="faq-a">いいえ。すべてブラウザ内で処理され、サーバーにデータは送信されません。</div>
+    </div>
+
+    <div class="section">
+      <h2>関連ツール</h2>
+      <div class="related">
+        <a href="../json-format/">📋 JSON整形</a>
+        <a href="../password-gen/">🔐 パスワード生成</a>
+        <a href="../unit-conv/">📐 単位変換</a>
+      </div>
+    </div>
+  </main>
+
+  <footer><a href="../privacy.html">プライバシーポリシー</a><a href="../contact.html">お問い合わせ</a><br>&copy; 2026 Web Tools</footer>
+
+  <script>
+    function c(){const t=document.getElementById('t').value;document.getElementById('ch').textContent=t.replace(/\n/g,'').length;document.getElementById('chn').textContent=t.replace(/[\s\n]/g,'').length;document.getElementById('ln').textContent=t?t.split('\n').length:0;document.getElementById('pg').textContent=t?t.split(/\n\s*\n/).filter(p=>p.trim()).length||(t.trim()?1:0):0;document.getElementById('by').textContent=new Blob([t]).size;const e=(t.match(/[a-zA-Z]+/g)||[]).length;const j=t.replace(/[a-zA-Z0-9\s\p{P}]/gu,'').length;document.getElementById('w').textContent=e+Math.ceil(j/1.5)}
+    function cp(b){const r=document.querySelector('.grid').innerText;navigator.clipboard.writeText(r).then(()=>{b.textContent='✓';setTimeout(()=>b.textContent='結果をコピー',1500)})}
+    function toggleTheme(){const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark');localStorage.setItem('theme',d.getAttribute('data-theme'))}
+    if(localStorage.getItem('theme'))document.documentElement.setAttribute('data-theme',localStorage.getItem('theme'));
+  </script>
+</body>
+</html>

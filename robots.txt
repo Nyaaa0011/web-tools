@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nyaaa0011.github.io/web-tools/sitemap.xml

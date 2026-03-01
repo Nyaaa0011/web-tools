@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>パスワード生成 - 安全なパスワードを無料で作成 | Web Tools</title>
+  <meta name="description" content="安全なランダムパスワードをワンクリックで生成。強度チェック付き。登録不要・完全無料。">
+  <link rel="alternate" hreflang="en" href="https://nyaaa0011.github.io/web-tools/en/password-gen/">
+  <link rel="alternate" hreflang="ja" href="https://nyaaa0011.github.io/web-tools/password-gen/">
+  <style>
+    :root{--bg:#fff;--bg2:#f5f7fa;--text:#333;--text2:#666;--border:#e0e0e0;--accent:#4CAF50;--accent-light:rgba(76,175,80,.1);--card:#fff;--input:#f5f7fa;--font:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans',sans-serif}@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1a1a2e;--bg2:#16213e;--text:#e0e0e0;--text2:#a0a0a0;--border:#2a2a4a;--card:#1e1e3a;--input:#16213e}}[data-theme=dark]{--bg:#1a1a2e;--bg2:#16213e;--text:#e0e0e0;--text2:#a0a0a0;--border:#2a2a4a;--card:#1e1e3a;--input:#16213e}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh;display:flex;flex-direction:column}a{color:var(--accent)}header{background:var(--card);border-bottom:1px solid var(--border);padding:0 1rem;position:sticky;top:0;z-index:100}.header-inner{max-width:800px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}.logo{font-size:1.1rem;font-weight:700;color:var(--text);text-decoration:none}.hdr-actions{display:flex;gap:.5rem}.btn-i{background:none;border:1px solid var(--border);border-radius:8px;padding:.4rem .6rem;cursor:pointer;color:var(--text);font-size:.85rem}main{flex:1;max-width:800px;margin:0 auto;padding:2rem 1rem;width:100%}h1{font-size:1.5rem;font-weight:700;text-align:center;margin-bottom:.5rem}.sub{text-align:center;color:var(--text2);margin-bottom:2rem}.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:2rem}.btns{display:flex;gap:.5rem;margin-top:1rem;flex-wrap:wrap}.btn{padding:.6rem 1.2rem;border:none;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer;font-family:var(--font)}.btn-p{background:var(--accent);color:#fff}.btn-s{background:var(--bg2);color:var(--text);border:1px solid var(--border)}footer{border-top:1px solid var(--border);padding:1rem;text-align:center;font-size:.8rem;color:var(--text2);margin-top:auto}footer a{color:var(--text2);margin:0 .5rem}label{display:block;font-size:.85rem;font-weight:600;margin-bottom:.3rem;color:var(--text2)}
+    .pw-box{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1rem;font-family:monospace;font-size:1.3rem;text-align:center;word-break:break-all;letter-spacing:1px;min-height:48px;position:relative;cursor:pointer}
+    .str-meter{height:6px;border-radius:3px;background:var(--border);margin-top:.5rem;overflow:hidden}.str-fill{height:100%;border-radius:3px;transition:width .3s,background .3s}
+    .str-txt{text-align:center;font-size:.85rem;margin-top:.3rem;color:var(--text2)}
+    input[type=range]{width:100%;margin:.5rem 0;accent-color:var(--accent)}
+    .tgl-group{display:flex;flex-wrap:wrap;gap:.5rem;margin:.5rem 0}.tgl{display:flex;align-items:center;gap:.4rem;padding:.4rem .8rem;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:.85rem;user-select:none}.tgl:has(input:checked){background:var(--accent-light);border-color:var(--accent)}.tgl input{display:none}
+    .related{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.8rem}.related a{padding:.5rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:.85rem;color:var(--text);text-decoration:none}.section{margin-top:2rem}.section h2{font-size:1.1rem;margin-bottom:.8rem;border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:.3rem}
+  </style>
+</head>
+<body>
+  <header><div class="header-inner"><a href="../" class="logo">🛠️ Web Tools</a><div class="hdr-actions"><a href="../en/password-gen/" class="btn-i">EN</a><button class="btn-i" onclick="toggleTheme()">🌙</button></div></div></header>
+  <main>
+    <h1>🔐 パスワード生成</h1>
+    <p class="sub">安全なランダムパスワードをワンクリックで生成</p>
+    <div class="card">
+      <div class="pw-box" id="pw" onclick="cp(this.textContent,this)"></div>
+      <div class="str-meter"><div class="str-fill" id="bar"></div></div>
+      <div class="str-txt" id="stxt"></div>
+      <div style="margin-top:1rem"><label>文字数: <strong id="lv">16</strong></label><input type="range" id="len" min="4" max="64" value="16" oninput="lv.textContent=this.value;gen()"></div>
+      <div class="tgl-group">
+        <label class="tgl"><input type="checkbox" checked onchange="gen()" id="up">大文字 (A-Z)</label>
+        <label class="tgl"><input type="checkbox" checked onchange="gen()" id="lo">小文字 (a-z)</label>
+        <label class="tgl"><input type="checkbox" checked onchange="gen()" id="dg">数字 (0-9)</label>
+        <label class="tgl"><input type="checkbox" checked onchange="gen()" id="sy">記号 (!@#$)</label>
+      </div>
+      <div class="btns"><button class="btn btn-p" onclick="gen()">🔄 再生成</button><button class="btn btn-s" onclick="cp(pw.textContent,this)">📋 コピー</button></div>
+    </div>
+    <div class="section"><h2>関連ツール</h2><div class="related"><a href="../moji-count/">📝 文字数カウンター</a><a href="../json-format/">📋 JSON整形</a><a href="../color-code/">🎨 カラーコード変換</a></div></div>
+  </main>
+  <footer><a href="../privacy.html">プライバシーポリシー</a><a href="../contact.html">お問い合わせ</a><br>&copy; 2026 Web Tools</footer>
+  <script>
+    function gen(){const n=+len.value;let ch='';if(up.checked)ch+='ABCDEFGHIJKLMNOPQRSTUVWXYZ';if(lo.checked)ch+='abcdefghijklmnopqrstuvwxyz';if(dg.checked)ch+='0123456789';if(sy.checked)ch+='!@#$%^&*()_+-=[]{}|;:,.<>?';if(!ch){ch='abcdefghijklmnopqrstuvwxyz';lo.checked=true}const a=new Uint32Array(n);crypto.getRandomValues(a);let p='';for(let i=0;i<n;i++)p+=ch[a[i]%ch.length];pw.textContent=p;str(p)}
+    function str(p){let s=0;if(p.length>=8)s++;if(p.length>=12)s++;if(p.length>=16)s++;if(/[a-z]/.test(p)&&/[A-Z]/.test(p))s++;if(/\d/.test(p))s++;if(/[^a-zA-Z0-9]/.test(p))s++;const pct=Math.min(s/6*100,100);bar.style.width=pct+'%';const lb=['非常に弱い','弱い','普通','強い','非常に強い','最強'];const cl=['#f44336','#ff9800','#ffc107','#8bc34a','#4caf50','#2e7d32'];const i=Math.min(s,5);bar.style.background=cl[i];stxt.textContent='強度: '+lb[i]}
+    function cp(t,b){navigator.clipboard.writeText(t).then(()=>{const o=b.textContent;b.textContent='✓ コピー済み';setTimeout(()=>b.textContent=o,1500)})}
+    function toggleTheme(){const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark');localStorage.setItem('theme',d.getAttribute('data-theme'))}
+    if(localStorage.getItem('theme'))document.documentElement.setAttribute('data-theme',localStorage.getItem('theme'));gen();
+  </script>
+</body>
+</html>
