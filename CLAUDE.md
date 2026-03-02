@@ -25,9 +25,10 @@
 │   ├── split-bill/        ← Bill Splitter
 │   ├── age-calc/          ← Age Calculator
 │   └── unit-conv/         ← Unit Converter
-├── privacy.html           ← プライバシーポリシー (JP)
-├── en/privacy.html        ← Privacy Policy (EN)
-├── contact.html           ← お問い合わせ
+├── about/                 ← About（サイト概要・運営情報）
+├── privacy/               ← プライバシーポリシー (JP)
+├── contact/               ← お問い合わせ
+├── en/privacy/            ← Privacy Policy (EN)
 ├── sitemap.xml
 └── robots.txt
 ```
@@ -77,4 +78,5 @@
 - [x] DNS レコード設定（A レコード × 4 + CNAME）
 - [x] ネームサーバーを ns1-ns3.xdomain.ne.jp に変更
 - [x] HTTPS 強制有効化
+- [x] about/contact/privacy を directory-based URL に移行（.html → /dir/index.html）
 - 公開URL: https://piktool.net/

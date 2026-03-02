@@ -132,22 +132,22 @@
 
   <!-- About / Privacy / Contact -->
   <url>
-    <loc>https://piktool.net/about.html</loc>
+    <loc>https://piktool.net/about/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://piktool.net/privacy.html</loc>
+    <loc>https://piktool.net/privacy/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://piktool.net/en/privacy.html</loc>
+    <loc>https://piktool.net/en/privacy/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://piktool.net/contact.html</loc>
+    <loc>https://piktool.net/contact/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

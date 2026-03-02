@@ -58,7 +58,7 @@
     </div>
     <div class="section"><h2>Related Tools</h2><div class="related"><a href="../char-count/">📝 Character Counter</a><a href="../json-format/">📋 JSON Formatter</a><a href="../color-code/">🎨 Color Converter</a></div></div>
   </main>
-  <footer><nav aria-label="Footer"><a href="../../about.html">About</a><a href="../privacy.html">Privacy Policy</a><a href="../../contact.html">Contact</a></nav><br>&copy; 2026 Web Tools</footer>
+  <footer><nav aria-label="Footer"><a href="../../about/">About</a><a href="../privacy/">Privacy Policy</a><a href="../../contact/">Contact</a></nav><br>&copy; 2026 Web Tools</footer>
   <script>
     function gen(){const n=+len.value;let ch='';if(up.checked)ch+='ABCDEFGHIJKLMNOPQRSTUVWXYZ';if(lo.checked)ch+='abcdefghijklmnopqrstuvwxyz';if(dg.checked)ch+='0123456789';if(sy.checked)ch+='!@#$%^&*()_+-=[]{}|;:,.<>?';if(!ch){ch='abcdefghijklmnopqrstuvwxyz';lo.checked=true}const a=new Uint32Array(n);crypto.getRandomValues(a);let p='';for(let i=0;i<n;i++)p+=ch[a[i]%ch.length];pw.textContent=p;str(p)}
     function str(p){let s=0;if(p.length>=8)s++;if(p.length>=12)s++;if(p.length>=16)s++;if(/[a-z]/.test(p)&&/[A-Z]/.test(p))s++;if(/\d/.test(p))s++;if(/[^a-zA-Z0-9]/.test(p))s++;const pct=Math.min(s/6*100,100);bar.style.width=pct+'%';const lb=['Very Weak','Weak','Fair','Strong','Very Strong','Excellent'];const cl=['#f44336','#ff9800','#ffc107','#8bc34a','#4caf50','#2e7d32'];const i=Math.min(s,5);bar.style.background=cl[i];stxt.textContent='Strength: '+lb[i]}
