@@ -13,6 +13,7 @@
   <meta property="og:description" content="Split bills among friends easily. Tip and rounding included.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://piktool.net/en/split-bill/">
+  <meta property="og:image" content="https://piktool.net/assets/og-image.png">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
   <link rel="alternate" hreflang="ja" href="https://piktool.net/warikan/">
   <link rel="alternate" hreflang="x-default" href="https://piktool.net/warikan/">
@@ -54,7 +55,7 @@
     </div>
     <div class="section"><h2>Related Tools</h2><div class="related"><a href="../age-calc/">🎂 Age Calculator</a><a href="../unit-conv/">📐 Unit Converter</a><a href="../char-count/">📝 Character Counter</a></div></div>
   </main>
-  <footer><a href="../privacy.html">Privacy Policy</a><a href="../../contact.html">Contact</a><br>&copy; 2026 Web Tools</footer>
+  <footer><nav aria-label="Footer"><a href="../../about.html">About</a><a href="../privacy.html">Privacy Policy</a><a href="../../contact.html">Contact</a></nav><br>&copy; 2026 Web Tools</footer>
   <script>
     function calc(){const t=+tot.value,p=+ppl.value,tp=+tip.value;if(!t||!p)return;const ti=t*tp/100,wt=t+ti,pp=Math.round(wt/p*100)/100;document.getElementById('pp').textContent='$'+pp.toFixed(2);document.getElementById('wt').textContent='$'+wt.toFixed(2);ta.textContent='$'+ti.toFixed(2);document.getElementById('tp').textContent='$'+(ti/p).toFixed(2)}
     function toggleTheme(){const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark');localStorage.setItem('theme',d.getAttribute('data-theme'))}

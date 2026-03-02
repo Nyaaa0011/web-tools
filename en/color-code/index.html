@@ -12,6 +12,7 @@
   <meta property="og:description" content="Convert between HEX, RGB, and HSL instantly.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://piktool.net/en/color-code/">
+  <meta property="og:image" content="https://piktool.net/assets/og-image.png">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
   <link rel="alternate" hreflang="ja" href="https://piktool.net/color-code/">
   <link rel="alternate" hreflang="en" href="https://piktool.net/en/color-code/">
@@ -58,7 +59,7 @@
     </div>
     <div class="section"><h2>Related Tools</h2><div class="related"><a href="../char-count/">📝 Character Counter</a><a href="../password-gen/">🔐 Password Generator</a><a href="../unit-conv/">📐 Unit Converter</a></div></div>
   </main>
-  <footer><a href="../privacy.html">Privacy Policy</a><a href="../../contact.html">Contact</a><br>&copy; 2026 Web Tools</footer>
+  <footer><nav aria-label="Footer"><a href="../../about.html">About</a><a href="../privacy.html">Privacy Policy</a><a href="../../contact.html">Contact</a></nav><br>&copy; 2026 Web Tools</footer>
   <script>
     function up(hx){pv.style.background=hx;css.textContent='HEX: '+hx+' | RGB: rgb('+r.value+','+g.value+','+b.value+') | HSL: hsl('+h.value+','+s.value+'%,'+l.value+'%)'}
     function fromHex(){let v=hex.value.replace(/[^0-9a-fA-F#]/g,'');if(!v.startsWith('#'))v='#'+v;if(v.length===4)v='#'+v[1]+v[1]+v[2]+v[2]+v[3]+v[3];if(v.length!==7)return;const R=parseInt(v.slice(1,3),16),G=parseInt(v.slice(3,5),16),B=parseInt(v.slice(5,7),16);r.value=R;g.value=G;b.value=B;pk.value=v;const[H,S,L]=rgbToHsl(R,G,B);h.value=H;s.value=S;l.value=L;up(v)}

@@ -12,6 +12,7 @@
   <meta property="og:description" content="テキストの文字数・単語数・行数をリアルタイムでカウント。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://piktool.net/moji-count/">
+  <meta property="og:image" content="https://piktool.net/assets/og-image.png">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
   <link rel="alternate" hreflang="en" href="https://piktool.net/en/char-count/">
   <link rel="alternate" hreflang="ja" href="https://piktool.net/moji-count/">
@@ -108,7 +109,7 @@
     </div>
   </main>
 
-  <footer><a href="../privacy.html">プライバシーポリシー</a><a href="../contact.html">お問い合わせ</a><br>&copy; 2026 Web Tools</footer>
+  <footer><nav aria-label="Footer"><a href="../about.html" title="About">サイトについて</a><a href="../privacy.html" title="Privacy Policy">プライバシーポリシー</a><a href="../contact.html" title="Contact">お問い合わせ</a></nav><br>&copy; 2026 Web Tools</footer>
 
   <script>
     function c(){const t=document.getElementById('t').value;document.getElementById('ch').textContent=t.replace(/\n/g,'').length;document.getElementById('chn').textContent=t.replace(/[\s\n]/g,'').length;document.getElementById('ln').textContent=t?t.split('\n').length:0;document.getElementById('pg').textContent=t?t.split(/\n\s*\n/).filter(p=>p.trim()).length||(t.trim()?1:0):0;document.getElementById('by').textContent=new Blob([t]).size;const e=(t.match(/[a-zA-Z]+/g)||[]).length;const j=t.replace(/[a-zA-Z0-9\s\p{P}]/gu,'').length;document.getElementById('w').textContent=e+Math.ceil(j/1.5)}
