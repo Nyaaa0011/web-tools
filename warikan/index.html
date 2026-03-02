@@ -54,7 +54,7 @@
     </div>
     <div class="section"><h2>関連ツール</h2><div class="related"><a href="../age-calc/">🎂 年齢計算</a><a href="../unit-conv/">📐 単位変換</a><a href="../moji-count/">📝 文字数カウンター</a></div></div>
   </main>
-  <footer><nav aria-label="Footer"><a href="../about.html" title="About">サイトについて</a><a href="../privacy.html" title="Privacy Policy">プライバシーポリシー</a><a href="../contact.html" title="Contact">お問い合わせ</a></nav><br>&copy; 2026 Web Tools</footer>
+  <footer><nav aria-label="Footer"><a href="../about.html" title="About">About</a><a href="../privacy.html" title="Privacy Policy">Privacy Policy</a><a href="../contact.html" title="Contact">Contact</a></nav><br>&copy; 2026 Web Tools</footer>
   <script>
     function calc(){const t=+tot.value,p=+ppl.value,m=md.value;if(!t||!p)return;const e=t/p;let pp;switch(m){case'ceil':pp=Math.ceil(e/100)*100;break;case'floor':pp=Math.floor(e/100)*100;break;case'round':pp=Math.round(e/100)*100;break;default:pp=Math.round(e)}const c=pp*p,d=c-t;document.getElementById('pp').textContent='\u00a5'+pp.toLocaleString();org.textContent=d>=0?'\u00a5'+d.toLocaleString()+' \u4F59\u308A':'\u00a5'+Math.abs(d).toLocaleString()+' \u4E0D\u8DB3';det.textContent='\u3010\u5185\u8A33\u3011\n'+p+'\u4EBA \u00d7 \u00a5'+pp.toLocaleString()+' = \u00a5'+c.toLocaleString()+'\n\u5408\u8A08 \u00a5'+t.toLocaleString()+' \u3068\u306E\u5DEE\u984D: \u00a5'+d.toLocaleString()}
     function toggleTheme(){const d=document.documentElement;d.setAttribute('data-theme',d.getAttribute('data-theme')==='dark'?'light':'dark');localStorage.setItem('theme',d.getAttribute('data-theme'))}

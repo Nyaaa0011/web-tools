@@ -56,7 +56,7 @@
     </div>
     <div class="section"><h2>関連ツール</h2><div class="related"><a href="../warikan/">💰 割り勘計算</a><a href="../unit-conv/">📐 単位変換</a><a href="../moji-count/">📝 文字数カウンター</a></div></div>
   </main>
-  <footer><nav aria-label="Footer"><a href="../about.html" title="About">サイトについて</a><a href="../privacy.html" title="Privacy Policy">プライバシーポリシー</a><a href="../contact.html" title="Contact">お問い合わせ</a></nav><br>&copy; 2026 Web Tools</footer>
+  <footer><nav aria-label="Footer"><a href="../about.html" title="About">About</a><a href="../privacy.html" title="Privacy Policy">Privacy Policy</a><a href="../contact.html" title="Contact">Contact</a></nav><br>&copy; 2026 Web Tools</footer>
   <script>
     const ET=['\u5B50','\u4E11','\u5BC5','\u536F','\u8FB0','\u5DF3','\u5348','\u672A','\u7533','\u9149','\u620C','\u4EA5'];
     function calc(){const b=new Date(bd.value);if(isNaN(b))return;const n=new Date();let a=n.getFullYear()-b.getFullYear();const m=n.getMonth()-b.getMonth();if(m<0||(m===0&&n.getDate()<b.getDate()))a--;let nx=new Date(n.getFullYear(),b.getMonth(),b.getDate());if(nx<=n)nx=new Date(n.getFullYear()+1,b.getMonth(),b.getDate());const dn=Math.ceil((nx-n)/864e5),dl=Math.floor((n-b)/864e5);age.textContent=a+'\u6B73';nb.textContent=dn+'\u65E5';document.getElementById('dl').textContent=dl.toLocaleString()+'\u65E5';eto.textContent=ET[(b.getFullYear()-4)%12]+'\u5E74';const mo=a*12+n.getMonth()-b.getMonth(),wk=Math.floor(dl/7),hr=dl*24;det.textContent=mo.toLocaleString()+' \u30F6\u6708 | '+wk.toLocaleString()+' \u9031\u9593 | '+dl.toLocaleString()+' \u65E5 | \u7D04 '+hr.toLocaleString()+' \u6642\u9593'}
